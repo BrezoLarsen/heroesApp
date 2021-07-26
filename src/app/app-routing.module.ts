@@ -6,11 +6,11 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
 const routes: Routes = [
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(module => module.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then(module => module.AuthModule) // LazyLoading
   },
   {
     path: 'heroes',
-    loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)
+    loadChildren: () => import('./heroes/heroes.module').then(module => module.HeroesModule) // LazyLoading
   },
   {
     path: '404',

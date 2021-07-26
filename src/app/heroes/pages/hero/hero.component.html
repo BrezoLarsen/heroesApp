@@ -1,1 +1,8 @@
-<p>hero works!</p>
+<div *ngIf="!hero; else heroDiv">
+  <mat-spinner></mat-spinner>
+</div>
+
+<ng-template #heroDiv>
+  {{hero}}
+</ng-template>
+

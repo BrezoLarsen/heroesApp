@@ -7,7 +7,7 @@ import { ListComponent } from './pages/list/list.component';
 import { SearchComponent } from './pages/search/search.component';
 import { HomeComponent } from './pages/home/home.component';
 
-const routes: Routes = [
+const heroesRoutes: Routes = [
   {
     path: '',
     component: HomeComponent,
@@ -21,7 +21,7 @@ const routes: Routes = [
         component: AddComponent
       },
       {
-        path: ':id',
+        path: 'detalle/:id',
         component: HeroComponent
       },
       {
@@ -29,12 +29,12 @@ const routes: Routes = [
         component: ListComponent
       },
       {
-        path: 'search',
+        path: 'buscar',
         component: SearchComponent
       },
       {
         path: '**',
-        redirectTo: 'list'
+        redirectTo: 'lista'
       }
     ]
   }
@@ -42,7 +42,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(heroesRoutes)
   ],
   exports: [
     RouterModule
