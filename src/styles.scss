@@ -29,7 +29,7 @@ $dark-theme:   mat-dark-theme((
 
 .dark {
   @include angular-material-color($dark-theme);
-  .link {
+  .link, .custom-button {
     color: mat-color($dark-accent);
   }
 }
@@ -50,4 +50,8 @@ $dark-theme:   mat-dark-theme((
   display: grid;
   place-items: center;
   height: calc(100vh - 64px);
+}
+
+.img-responsive {
+  width: 100%;
 }

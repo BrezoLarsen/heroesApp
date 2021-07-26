@@ -1,8 +1,26 @@
-<div *ngIf="!hero; else heroDiv">
+<div class="wrapper" *ngIf="!hero; else heroDiv">
   <mat-spinner></mat-spinner>
 </div>
 
 <ng-template #heroDiv>
-  {{hero}}
+  <h2>{{ hero.superhero }}</h2>
+
+  <div class="grid">
+    <div>
+      <img class="img-responsive" [src]="hero | image" alt="">
+    </div>
+
+    <div>
+      <h3>{{ hero.publisher }}</h3>
+      <mat-list>
+        <mat-list-item>Primera aparición: {{ hero.first_appearance }}</mat-list-item>
+        <mat-list-item>Caracteres: {{ hero.characters }}</mat-list-item>
+        <mat-list-item>Editorial: {{ hero.publisher }}</mat-list-item>
+        <mat-list-item>Alter-ego: {{ hero.alter_ego }}</mat-list-item>
+      </mat-list>
+      <br>
+      <button class="custom-button" mat-button (click)="back()">Volver</button>
+    </div>
+  </div>
 </ng-template>
 

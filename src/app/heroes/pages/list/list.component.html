@@ -6,7 +6,7 @@
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Nombre </th>
-        <td mat-cell *matCellDef="let hero" class="link" [routerLink]="['/heroes', hero.id]" primary> {{hero.superhero}} </td>
+        <td mat-cell *matCellDef="let hero" class="link" [routerLink]="['/heroes/detalle', hero.id]" primary> {{hero.superhero}} </td>
       </ng-container>
 
       <!-- Alter-ego Column -->

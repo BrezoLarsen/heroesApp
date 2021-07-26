@@ -9,6 +9,7 @@ import { HeroComponent } from './pages/hero/hero.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 import { MaterialModule } from '../material/material.module';
+import { ImagePipe } from './pipes/image.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MaterialModule } from '../material/material.module';
     SearchComponent,
     HeroComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    ImagePipe
   ],
   imports: [
     CommonModule,
